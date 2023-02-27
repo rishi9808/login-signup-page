@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 
 mongoose.connect("mongodb://localhost:27017/Auth").then(()=>{
     console.log("mongodb connected");
-}).catch(()=> {
+}).catch((err)=> {
     console.log("connection failed");
+    console.log(err);
 })
 
 
