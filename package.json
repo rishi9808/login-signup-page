@@ -1,0 +1,15 @@
+{
+  "name": "login-signup-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Rishikesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
