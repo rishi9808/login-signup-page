@@ -9,12 +9,23 @@
 </head>
 <body>
     <div class="container">
-        <p class="heading">Login in</p>
-    <form action="/login" method="post">
-        <input type="text" name="name" placeholder="Name">
-        <input type="password" name="password" placeholder="pass">
-        <input type="submit">
-    </form>
-    <a href="/signup">New account?</a>
+        <p class="heading" >Login</p>
+        <form action="/login" method="post">
+        <div class="box">
+            <p>Username</p>
+            <div>
+                <input type="name" name="name"  placeholder="Enter Your Username">
+            </div>
+        </div>
+        <div class="box">
+            <p>Password</p>
+            <div>
+                <input type="password" name="password"  placeholder="Enter Your Password">
+            </div>
+        </div> 
+        <button class="loginBtn" type="submit">Login</button>
+        </form> 
+        <p class="text">Dont have an account? <a href="/signup">Sign up</a></p>
+    </div>
 </body>
 </html>

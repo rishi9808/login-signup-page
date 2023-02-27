@@ -4,6 +4,9 @@ const path = require('path');
 const app=express();
 const collection = require('./models/mongodb')
 
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.json());
 app.set('view engine','hbs');
 app.set("views")
@@ -42,9 +45,7 @@ app.post('/login', async(req,res) => {
     const inputPass = req.body.password;
     if(await collection.findOne({name:inputName})){
         status=true;
-        if(await collection.findOne({password:inputPass})){
-            console.log("Logged in");
-            console.log(inputPass);
+        if(await collection.findOne({name:inputName , password:inputPass})){
             console.log(collection.findOne({password:inputPass}));
             res.render('index');
         }
